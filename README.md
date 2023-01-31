@@ -1,7 +1,7 @@
 # Snake-AI
 
 FONTOS:
-python 3.10 az utolo verzio amivel megy, 3.11-el nem kompatibilis a pygame.
+python 3.10 az utolso verzio amivel megy, 3.11-el nem kompatibilis a pygame.
 
 Amiket kell csinalni hogy menjen:
 1. git clone https://github.com/ViktorGyorgy/Snake-AI
