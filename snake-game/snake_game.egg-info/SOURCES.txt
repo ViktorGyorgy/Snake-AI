@@ -1,0 +1,9 @@
+setup.py
+snake_game/__init__.py
+snake_game.egg-info/PKG-INFO
+snake_game.egg-info/SOURCES.txt
+snake_game.egg-info/dependency_links.txt
+snake_game.egg-info/requires.txt
+snake_game.egg-info/top_level.txt
+snake_game/envs/__init__.py
+snake_game/envs/snake_world.py
