@@ -7,7 +7,7 @@ from collections import deque
 class SnakeWorldEnv(gym.Env):
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
 
-    def __init__(self, render_mode=None, size=6):
+    def __init__(self, render_mode=None, size=5):
         self.size = size
         self.window_size = 512
 
@@ -103,13 +103,13 @@ class SnakeWorldEnv(gym.Env):
         info = self._get_info()
         if (died1 and died2):
             terminated = 1
-            reward = (-50, -50)  
+            reward = (-500, -500)  
         elif died1:
             terminated = 1
-            reward = (-500, 25)
+            reward = (-500, 500)
         elif died2:
             terminated = 1
-            reward = (35, -500)
+            reward = (500, -500)
 
         if self.render_mode == "human":
             self._render_frame()

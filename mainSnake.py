@@ -42,7 +42,7 @@ class ReplayMemory(object):
         return len(self.memory)
 
 class DQN(nn.Module):
-    def __init__(self, input_size=40, hidden_size=128, output_size=4):
+    def __init__(self, input_size=29, hidden_size=128, output_size=4):
         super().__init__()
         self.linear1 = nn.Linear(input_size, hidden_size)
         self.linear2 = nn.Linear(hidden_size, hidden_size)
