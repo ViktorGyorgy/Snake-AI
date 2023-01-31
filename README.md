@@ -8,6 +8,6 @@ Amiket kell csinalni hogy menjen:
 2. cd Snake-AI
 3. pip install gym
 4. pip install numpy
-5. pip install pytorch 
+5. pip install torch 
 6. pip install -e snake-game
 7. python mainSnake.py
