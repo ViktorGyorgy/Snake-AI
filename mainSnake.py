@@ -229,6 +229,7 @@ for i in range(200000):
         optimize_model2()
         if done:
             env.reset()
+            break
 
     if i % TARGET_UPDATE == 0:
         target_net.load_state_dict(policy_net.state_dict())

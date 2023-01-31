@@ -82,19 +82,20 @@ class SnakeWorldEnv(gym.Env):
 
         self.snake1.pop()
         self.snake2.pop()
+        
         died1 = any(head1 < 0) or any(head1 >= self.size) or any([all(np.equal(head1, arr)) for arr in self.snake1]) or any([all(np.equal(head1, arr)) for arr in self.snake2])
         died2 = any(head2 < 0) or any(head2 >= self.size) or any([all(np.equal(head2, arr)) for arr in self.snake1]) or any([all(np.equal(head2, arr)) for arr in self.snake2])
+
         self.snake1.append(head1)
         self.snake2.append(head2)
         self.died1 = died1
         self.died2 = died2
 
         if all(np.equal(head1, head2)):
-            self.died1 = True
-            self.died2 = True
-
+            died1 = True
+            died2 = True
+        
         terminated = 0
-        #Manhattan distance, -0.2 pnealty, so they won't stay in one place
         distance1_from_apple = np.sum(np.abs(self.apple - head1))
         distance2_from_apple = np.sum(np.abs(self.apple - head2))
         reward = ( (1 / distance1_from_apple) + reward1_for_apple, (1 / distance2_from_apple) + reward2_for_apple)
